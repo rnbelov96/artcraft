@@ -32,3 +32,39 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
+
+@mixin title-main {
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 60px;
+}
+
+@mixin title {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 54px;
+}
+
+@mixin subtitle-bold {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+@mixin subtitle {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+@mixin main {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+@mixin main-bold {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+}

@@ -1,0 +1,80 @@
+.desc {
+  min-height: 848px;
+  @include bg;
+  background-image: url('/src/img/bgs/desc-bg.jpg');
+  padding-bottom: 40px;
+
+  @media (max-width: 991px) {
+    min-height: auto;
+  }
+}
+
+.desc__title {
+  @include max-width(760px);
+  font-size: 62px;
+  line-height: 1.23;
+  margin-top: 145px;
+  color: white;
+  margin-bottom: 12px;position: relative;
+
+  @media (max-width: 991px) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 43px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 26px;
+  }
+
+  &::after {
+    content: url('/src/img/desc-photo.png');
+    position: absolute;
+    right: -730px;
+    top: -120px;
+    z-index: -1;
+
+    @media (max-width: 1450px) {
+      right: -640px;
+    }
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  span {
+    color: $yellow;
+  }
+}
+
+.desc__text {
+  @include max-width(710px);
+  color: white;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 0;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+  }
+
+  b {
+    font-size: 36px;
+    line-height: 1.17;
+
+    @media (max-width: 767px) {
+      font-size: 29px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 18px;
+    }
+  }
+}
