@@ -1,0 +1,98 @@
+.formats {
+  padding-top: 60px;
+  padding-bottom: 105px;
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+  }
+}
+
+.formats__title {
+  @include title;
+  margin-bottom: 27px;
+}
+
+.formats__text {
+  @include subtitle;
+  @include max-width(775px);
+  margin-bottom: 30px;
+}
+
+.formats__list {
+  @include reset-list;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: 1450px) {
+    justify-content: center;
+    gap: 70px;
+  }
+}
+
+.formats__item {
+  @include max-width(464px);
+  min-height: 632px;
+  padding-top: 32px;
+  padding-left: 30px;
+  padding-right: 18px;
+  position: relative;
+
+  @media (max-width: 575px) {
+    padding-top: 13px;
+  }
+
+  &:nth-child(1) {
+    background: #EEEEEE;
+  }
+  &:nth-child(2) {
+    background: #CBCBCB;
+  }
+  &:nth-child(3) {
+    background: #B4B4B4;
+  }
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 307px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 265px;
+    font-size: 220px;
+    color: white;
+    opacity: 0.4;
+    left: 32px;
+    line-height: 49px;
+    font-family: 'Playfair Display';
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      content: url("/src/img/gallery/formats/#{$i}.jpg");
+    }
+
+    &:nth-child(#{$i})::after {
+      content: "0#{$i}";
+    }
+  }
+}
+
+.formats__item-title {
+  font-size: 24px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.formats__item-text {
+  @include main;
+  margin-bottom: 0;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}

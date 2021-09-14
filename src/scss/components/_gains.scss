@@ -96,13 +96,13 @@
     padding-right: 5px;
     font-weight: bold;
     background: #fade40;
-  }
 
-  span::selection {
-    background: #fade40;
-  }
+    &::selection {
+      background: #fade40;
+    }
 
-  span::-moz-selection {
-    background: #fade40;
+    &::-moz-selection {
+      background: #fade40;
+    }
   }
 }

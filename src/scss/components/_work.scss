@@ -1,0 +1,87 @@
+.work {
+  background: rgba(#EEEEED, 0.4);
+  padding-top: 60px;
+  padding-bottom: 120px;
+  min-height: 977px;
+
+  @media (max-width: 991px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+}
+
+.work__title {
+  @include title;
+  @include max-width(914px);
+  margin-bottom: 30px;
+
+  @media (max-width: 991px) {
+    br {
+      display: none;
+    }
+  }
+
+  span {
+    @include highlight;
+  }
+}
+
+.work__text {
+  @include subtitle;
+  @include max-width(670px);
+  margin-bottom: 30px;
+}
+
+.work__list {
+  @include reset-list;
+  @include max-width(680px);
+  position: relative;
+
+  &::before {
+    content: url('/src/img/work-photos.png');
+    position: absolute;
+    right: -786px;
+    top: -310px;
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+}
+
+.work__item {
+  padding-left: 120px;
+  margin-bottom: 45px;
+  @include main;
+  position: relative;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    padding-left: 104px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  b {
+    font-size: 28px;
+
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+  }
+
+  @for $i from 1 through 3 { 
+    &:nth-child(#{$i})::before {
+      content: url("/src/img/icons/work/#{$i}.png");
+    }
+  }
+}
+
