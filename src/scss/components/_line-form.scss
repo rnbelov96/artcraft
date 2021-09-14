@@ -15,6 +15,14 @@
     margin-bottom: 100px;
   }
 
+  &_feedback-yellow {
+    margin-bottom: 142px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+  }
+
   @media (max-width: 1540px) {
     width: 100%;
   }
@@ -35,6 +43,7 @@
   line-height: 1.25;
   text-align: center;
   margin-bottom: 45px;
+  font-weight: normal;
 
   @media (max-width: 767px) {
     font-size: 22px;
@@ -119,17 +128,17 @@
 }
 
 .line-form__policy {
-   font-weight: 300;
-   font-size: 14px;
-   line-height: 1.43;
-   text-align: center;
-   color: rgba($black, 0.5);
-   margin-bottom: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  color: rgba($black, 0.5);
+  margin-bottom: 0;
 
-   button {
-     @include reset-btn;
-     color: rgba($black, 0.5);
-     text-decoration: underline;
-     font-weight: 300;
-   }
+  button {
+    @include reset-btn;
+    color: rgba($black, 0.5);
+    text-decoration: underline;
+    font-weight: 300;
+  }
 }

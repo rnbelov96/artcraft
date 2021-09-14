@@ -1,0 +1,74 @@
+.market {
+  padding-bottom: 26px;
+
+  @media (max-width: 575px) {
+    padding-bottom: 0;
+  }
+}
+
+.market__title {
+  @include title;
+  @include max-width(856px);
+  margin-bottom: 32px;
+
+  span {
+    @include highlight;
+  }
+}
+
+.market__text {
+  @include subtitle;
+  @include max-width(928px);
+  margin-bottom: 68px;
+}
+
+.market__list {
+  @include reset-list;
+  @include max-width(1026px);
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+  }
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/market-photo.png');
+    right: -660px;
+    top: -266px;
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+}
+
+.market__item {
+  margin-bottom: 38px;
+  @include main;
+  @include max-width(480px);
+  padding-top: 104px;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/market/#{$i}.png');
+    }
+  }
+}

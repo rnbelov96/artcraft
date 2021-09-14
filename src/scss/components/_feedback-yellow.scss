@@ -1,0 +1,15 @@
+.feedback-yellow__bg {
+  position: absolute;
+  content: '';
+  width: 1920px;
+  height: 240px;
+  background: #fade40;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 104px;
+  z-index: -1;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
