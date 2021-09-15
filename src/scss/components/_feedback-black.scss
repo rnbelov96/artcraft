@@ -1,0 +1,31 @@
+.feedback-black {
+  min-height: 552px;
+  @include bg;
+  background-image: url('/src/img/bgs/feedback-black-bg.jpg');
+  padding-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 991px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.feedback-black__title {
+  font-size: 46px;
+  font-weight: 500;
+  color: $yellow;
+  text-align: center;
+  line-height: 1.17;
+  margin-bottom: 16px;
+}
+
+.feedback-black__text {
+  color: white;
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 32px;
+}

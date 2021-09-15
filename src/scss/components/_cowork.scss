@@ -1,0 +1,57 @@
+.cowork {
+  padding-bottom: 78px;
+
+  @media (max-width: 575px) {
+    padding-bottom: 40px;
+  }
+}
+
+.cowork__content {
+  position: relative;
+  margin-left: auto;
+  min-height: 616px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 56px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 56px;
+  background: #eeeeed;
+  @include max-width(824px);
+
+  @media (max-width: 991px) {
+    margin-right: auto;
+    min-height: auto;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &::before {
+    content: url('/src/img/cowork-photo.jpg');
+    top: 0px;
+    left: -616px;
+    position: absolute;
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+}
+
+.cowork__title {
+  @include title;
+  margin-bottom: 28px;
+  @include max-width(600px);
+}
+
+.cowork__text {
+  @include subtitle;
+  @include max-width(650px);
+  margin-bottom: 32px;
+}
