@@ -516,6 +516,268 @@
         </div>
       </section>
 
+      <section class="income">
+        <div class="container">
+          <h2 class="income__title">
+            <span>Чистая прибыль от 100 000 рублей</span> <br />
+            и другие ключевые показатели вашего будущего бизнеса
+          </h2>
+          <p class="income__list-label">Финансовые показатели:</p>
+          <ul class="income__list">
+            <li class="income__item">
+              <p class="income__item-text">Ежемесячная выручка —</p>
+              <p class="income__item-number">от 500 до 600</p>
+              <p class="income__item-number">тысяч рублей</p>
+            </li>
+            <li class="income__item">
+              <p class="income__item-text">
+                Рентабельность по чистой прибыли —
+              </p>
+              <p class="income__item-number income__item-number_small">25%</p>
+            </li>
+            <li class="income__item">
+              <p class="income__item-text">Ежемесячная прибыль —</p>
+              <p class="income__item-number">от 100 до 250</p>
+              <p class="income__item-number">тысяч рублей</p>
+            </li>
+          </ul>
+          <p class="income__graph-label">Структура продаж:</p>
+          <div class="income__graph-row">
+            <div class="income__graph-logo-box">
+              <img
+                src="./img/gallery/income/1.png"
+                alt="Логотип компании"
+                class="income__graph-logo"
+              />
+            </div>
+            <div class="income__graph-rect income__graph-rect_big"></div>
+            <p class="income__graph-number income__graph-number_big">62%</p>
+          </div>
+          <div class="income__graph-row">
+            <div class="income__graph-logo-box">
+              <img
+                src="./img/gallery/income/2.png"
+                alt="Логотип компании"
+                class="income__graph-logo"
+              />
+            </div>
+            <div class="income__graph-rect income__graph-rect_medium"></div>
+            <p class="income__graph-number income__graph-number_medium">35%</p>
+          </div>
+          <div class="income__graph-row">
+            <div class="income__graph-logo-box">
+              <img
+                src="./img/gallery/income/3.png"
+                alt="Логотип компании"
+                class="income__graph-logo"
+              />
+            </div>
+            <div class="income__graph-rect income__graph-rect_small"></div>
+            <p class="income__graph-number income__graph-number_small">3%</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            <span>Узнайте, сколько вы заработаете</span> на красоте и творчестве
+          </h2>
+          <div class="calc__content">
+            <div class="calc__main-box">
+              <div class="calc__input-box">
+                <p class="calc__input-label">Аренда рабочих мест</p>
+                <input
+                  type="range"
+                  step="180"
+                  min="600"
+                  max="1500"
+                  class="calc__input js-range js-rent-range"
+                />
+                <div class="calc__endpoints">
+                  <div class="calc__endpoint">600</div>
+                  <div class="calc__endpoint">1500</div>
+                </div>
+              </div>
+              <div class="calc__input-box">
+                <p class="calc__input-label">Обучение бьюти-мастеров</p>
+                <input
+                  type="range"
+                  step="140"
+                  min="500"
+                  max="1200"
+                  class="calc__input js-range js-training-range"
+                />
+                <div class="calc__endpoints">
+                  <div class="calc__endpoint">500</div>
+                  <div class="calc__endpoint">1200</div>
+                </div>
+              </div>
+              <div class="calc__input-box">
+                <p class="calc__input-label">Салон красоты</p>
+                <input
+                  type="range"
+                  step="1"
+                  min="1"
+                  max="5"
+                  class="calc__input js-range js-room-range"
+                />
+                <div class="calc__endpoints">
+                  <div class="calc__endpoint">1</div>
+                  <div class="calc__endpoint">2</div>
+                  <div class="calc__endpoint">3</div>
+                  <div class="calc__endpoint">4</div>
+                  <div class="calc__endpoint">5</div>
+                </div>
+              </div>
+              <p class="calc__result-label">Итого:</p>
+              <p class="calc__result">
+                <span class="js-calc-result">132 000</span> рублей в месяц
+              </p>
+            </div>
+
+            <form class="modal-form modal-form_calc">
+              <h3 class="modal-form__title">Зафиксировать прибыль</h3>
+              <div class="modal-form__input-list">
+                <div class="modal-form__input-box">
+                  <p class="modal-form__input-label">Введите ваше имя</p>
+                  <input
+                    type="text"
+                    name="name"
+                    data-type="name"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <p class="modal-form__input-label">Введите ваш телефон</p>
+                  <input
+                    type="text"
+                    placeholder="+7 (    ) ___ __ __"
+                    name="phone"
+                    data-type="phone"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <p class="modal-form__input-label">Введите ваш e-mail</p>
+                  <input
+                    type="email"
+                    placeholder="example@mail.ru"
+                    name="email"
+                    data-type="email"
+                    class="modal-form__input"
+                  />
+                </div>
+                <button class="button button_modal-form">
+                  Занять 1 из 7 мест
+                </button>
+              </div>
+              <p class="modal-form__policy">
+                Нажимая на кнопку «Проверить свой город», я даю согласие на
+                обработку персональных данных и соглашаюсь с
+                <button class="js-policy">политикой конфиденциальности</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="launch">
+        <div class="container">
+          <h2 class="launch__title">
+            <span>Запуск за 25–35 дней</span> без ошибок и стресса
+          </h2>
+          <ul class="launch__list">
+            <li class="launch__item">
+              <p class="launch__item-title">Договор</p>
+              <p class="launch__item-text">
+                Юридически закрепляем взаимные права и обязанности, ваши
+                интересы защищены законом
+              </p>
+            </li>
+            <li class="launch__item">
+              <p class="launch__item-title">Поиск и ремонт помещения</p>
+              <p class="launch__item-text">
+                Находим площадь, разрабатываем дизайн-проект и помогаем
+                проконтролировать ход работы.
+              </p>
+            </li>
+            <li class="launch__item">
+              <p class="launch__item-title">Наём и обучение персонала</p>
+              <p class="launch__item-text">
+                Дадим подробные инструкции по подбору места для магазина —
+                избежите распространённых ошибок и попадёте в район концентрации
+                покупателей.
+              </p>
+            </li>
+            <li class="launch__item">
+              <p class="launch__item-title">Рекламная кампания</p>
+              <p class="launch__item-text">
+                Начинаем продвижение вашего коворкинга — запускаем таргетинг,
+                ведём социальные сети и подключаем другие каналы привлечения
+                клиентов (работа с блогерами, оффлайн реклама и др.).
+              </p>
+            </li>
+            <li class="launch__item">
+              <p class="launch__item-title">открытие</p>
+              <p class="launch__item-text">
+                Принимаете резидентов, набираете популярность и выходите на
+                плановые показатели прибыли.
+              </p>
+            </li>
+          </ul>
+          <div class="launch__nav-box">
+            <div class="launch__nav"></div>
+            <div class="launch__nav"></div>
+            <div class="launch__nav"></div>
+            <div class="launch__nav"></div>
+            <div class="launch__nav"></div>
+          </div>
+
+          <div class="launch__last-box">
+            <div class="launch__number-box">
+              <p class="launch__current-number">01</p>
+              <p class="launch__total-number">/5</p>
+            </div>
+            <div class="launch__btn-box">
+              <button class="launch__prev-btn">
+                <svg
+                  width="42"
+                  height="29"
+                  viewBox="0 0 42 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M41 14.6929L2.74879 14.6661M14.8776 1.24756L1 14.5809L14.8776 27.9142"
+                    stroke="#E5E5E5"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg></button
+              ><button class="launch__next-btn">
+                <svg
+                  width="44"
+                  height="31"
+                  viewBox="0 0 44 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 15.6929L40.2512 15.6661M28.1224 2.24756L42 15.5809L28.1224 28.9142"
+                    stroke="#E5E5E5"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="slider">
         <div class="slider__wrapper">
           <div class="slider__img-box">

@@ -1,0 +1,154 @@
+.income {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 35px;
+    padding-top: 35px;
+  }
+}
+
+.income__title {
+  @include title;
+  margin-bottom: 32px;
+
+  @media (max-width: 991px) {
+    br {
+      display: none;
+    }
+  }
+
+  span {
+    @include highlight;
+  }
+}
+
+.income__list-label {
+  margin-bottom: 32px;
+  @include subtitle-bold;
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+  }
+}
+
+.income__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 73px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 50px;
+  }
+}
+
+.income__item {
+  @include max-width(400px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.income__item-text {
+  text-align: center;
+  @include subtitle;
+  margin-bottom: 16px;
+}
+
+.income__item-number {
+  @include highlight;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1.42;
+  margin-bottom: 0;
+  text-align: center;
+  @include max-width(292px);
+
+  &_small {
+    @include max-width(192px);
+  }
+}
+
+.income__graph-label {
+  margin-bottom: 32px;
+  @include subtitle-bold;
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+  }
+}
+
+.income__graph-row {
+  display: flex;
+  align-items: center;
+  
+  gap: 32px;
+  margin-bottom: 64px;
+
+  @media (max-width: 575px) {
+    gap: 17px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.income__graph-logo-box {
+  width: 22.7%;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.income__graph-logo {
+  width: 100%;
+  max-width: 328px;
+}
+
+.income__graph-rect {
+  height: 64px;
+  background: linear-gradient(180deg, #FADE40 0%, #FFC700 100%);
+  
+  &_big {
+    width: 48%;
+
+    @media (max-width: 575px) {
+      width: 58%;
+    }
+  }
+
+  &_medium {
+    width: 31%;
+  }
+
+  &_small {
+    width: 14.4%;
+  }
+}
+
+.income__graph-number {
+  font-weight: 500;
+  margin-bottom: 0;
+
+  &_big {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  &_medium {
+    font-size: 40px;
+    line-height: 1.35;
+  }
+
+  &_small {
+    font-size: 30px;
+    line-height: 1.8;
+  }
+}

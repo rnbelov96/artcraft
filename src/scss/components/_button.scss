@@ -19,6 +19,10 @@
   overflow: hidden;
   position: relative;
 
+  &_modal {
+    font-weight: normal;
+  }
+
   &:hover {
     background: #FADE40;
   }
