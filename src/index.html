@@ -687,7 +687,7 @@
           <h2 class="launch__title">
             <span>Запуск за 25–35 дней</span> без ошибок и стресса
           </h2>
-          <ul class="launch__list">
+          <ul class="launch__list js-launch-slider">
             <li class="launch__item">
               <p class="launch__item-title">Договор</p>
               <p class="launch__item-text">
@@ -726,8 +726,8 @@
               </p>
             </li>
           </ul>
-          <div class="launch__nav-box">
-            <div class="launch__nav"></div>
+          <div class="launch__nav-box js-nav-box">
+            <div class="launch__nav launch__nav_active"></div>
             <div class="launch__nav"></div>
             <div class="launch__nav"></div>
             <div class="launch__nav"></div>
@@ -736,11 +736,11 @@
 
           <div class="launch__last-box">
             <div class="launch__number-box">
-              <p class="launch__current-number">01</p>
+              <p class="launch__current-number js-current-tab">01</p>
               <p class="launch__total-number">/5</p>
             </div>
             <div class="launch__btn-box">
-              <button class="launch__prev-btn">
+              <button disabled class="launch__prev-btn js-prev-btn">
                 <svg
                   width="42"
                   height="29"
@@ -756,24 +756,325 @@
                     stroke-linejoin="round"
                   />
                 </svg></button
-              ><button class="launch__next-btn">
+              ><button class="launch__next-btn js-next-btn">
                 <svg
-                  width="44"
-                  height="31"
-                  viewBox="0 0 44 31"
+                  width="42"
+                  height="29"
+                  viewBox="0 0 42 29"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M2 15.6929L40.2512 15.6661M28.1224 2.24756L42 15.5809L28.1224 28.9142"
                     stroke="#E5E5E5"
-                    stroke-width="3"
+                    stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="help">
+        <div class="container">
+          <h2 class="help__title">
+            <span>Обучаем,</span> сопровождаем, продвигаем
+          </h2>
+          <ul class="help__list help__list_right">
+            <li class="help__item">
+              <p class="help__item-title">Выбор места</p>
+              <p class="help__item-text">
+                Вместе найдём в вашем городе перспективную площадь
+                для коворкинга, которая будет подходить по расположению
+                и планировке.
+              </p>
+            </li>
+            <li class="help__item">
+              <p class="help__item-title">Рекрутинг и обучение персонала</p>
+              <p class="help__item-text">
+                Вместе найдём в вашем городе перспективную площадь для
+                коворкинга, которая будет подходить по расположению и
+                планировке.
+              </p>
+            </li>
+            <li class="help__item">
+              <p class="help__item-title">Разработка ассортимента</p>
+              <p class="help__item-text">
+                Предоставим перечень продукции для продажи в первые месяцы
+                работы.
+              </p>
+            </li>
+            <li class="help__item">
+              <p class="help__item-title">Организация поставок</p>
+              <p class="help__item-text">
+                Доставим оборудование, а также дадим контакты производителей и
+                дистрибьюторов косметики, инструментов, стайлингов для Color bar
+                для заказа по специальным ценам.
+              </p>
+            </li>
+          </ul>
+          <ul class="help__list help__list_left">
+            <li class="help__item">
+              <p class="help__item-title">Помощь в запуске</p>
+              <p class="help__item-text">
+                Открытие вашего коворкинга будет сопровождать экспертная команда
+                из 3–5 специалистов, включая собственника и менеджера
+                по развитию
+              </p>
+            </li>
+            <li class="help__item">
+              <p class="help__item-title">Роялти-каникулы</p>
+              <p class="help__item-text">
+                В течение 1–3 месяцев после открытия вы освобождаетесь от
+                роялти.
+              </p>
+            </li>
+            <li class="help__item">
+              <p class="help__item-title">Реклама у блогеров</p>
+              <p class="help__item-text">
+                Организуем сотрудничество с инфлюенсерами из вашего города и
+                сделаем ваш коворкинг популярным местом среди целевой аудитории.
+              </p>
+            </li>
+            <li class="help__item">
+              <p class="help__item-title">Оперативная поддержка</p>
+              <p class="help__item-text">
+                Всегда остаёмся на связи, помогаем вести дела и увеличивать
+                прибыль.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feedback-yellow feedback-yellow_bottom">
+        <div class="container">
+          <div class="feedback-yellow__bg"></div>
+          <form class="line-form line-form_feedback-yellow-bottom">
+            <h3 class="line-form__title">
+              Продуманные меры поддержки для сильного старта — действуйте как
+              профессионал
+            </h3>
+            <div class="line-form__input-list">
+              <div class="line-form__input-box">
+                <p class="line-form__input-label">Введите ваше имя</p>
+                <input
+                  type="text"
+                  name="name"
+                  data-type="name"
+                  class="line-form__input"
+                />
+              </div>
+              <div class="line-form__input-box">
+                <p class="line-form__input-label">Введите ваш телефон</p>
+                <input
+                  type="text"
+                  placeholder="+7 (    ) ___ __ __"
+                  name="phone"
+                  data-type="phone"
+                  class="line-form__input"
+                />
+              </div>
+              <div class="line-form__input-box">
+                <p class="line-form__input-label">Введите ваш e-mail</p>
+                <input
+                  type="email"
+                  placeholder="example@mail.ru"
+                  name="email"
+                  data-type="email"
+                  class="line-form__input"
+                />
+              </div>
+              <button class="button button_line-form">стать партнёром</button>
+            </div>
+            <p class="line-form__policy">
+              Нажимая на кнопку «Cтать партнёром», я даю согласие на обработку
+              персональных данных и соглашаюсь с
+              <button class="js-policy">политикой конфиденциальности</button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="master">
+        <div class="container">
+          <h2 class="master__title">
+            <span>Привлекайте мастеров</span> технологичным подходом
+          </h2>
+          <p class="master__text master__text_top">
+            ARTCRAFT владеет <span>собственным мобильным приложением.</span> Оно
+            упрощает резидентам работу в коворкинге и позволяет:
+          </p>
+          <ul class="master__list">
+            <li class="master__item">
+              За 1 минуту <b>забронировать кабинет</b> на нужное время —
+              без визитов и звонков.
+            </li>
+            <li class="master__item">
+              <b>Снять бронь,</b> если обслуживание отменилось.
+            </li>
+          </ul>
+          <p class="master__text master__text_bottom">
+            Как наш партнёр <b>вы получите доступ к приложению</b> и предложите
+            его своим постоянным клиентам.
+          </p>
+        </div>
+      </section>
+
+      <section class="marketing">
+        <div class="container">
+          <h2 class="marketing__title">
+            Подключаем <span>все возможности маркетинга</span> для максимально
+            быстрой окупаемости
+          </h2>
+          <p class="marketing__text">
+            <b>В ARTCRAFT мощная команда по маркетингу</b> — поможем и вам
+            набрать популярность и привлечь нужное число резидентов.
+          </p>
+          <ul class="marketing__list">
+            <li class="marketing__item">
+              <b>Инвестируем от 100 000 рублей в офлайн-продвижение</b> всех
+              форматов каждый квартал.
+            </li>
+            <li class="marketing__item">
+              <b>Привлекаем внимание посетителей</b> заметными стильными
+              вывесками и указателями.
+            </li>
+            <li class="marketing__item">
+              <b>Внедрили систему подарочных именных сертификатов</b> на услуги
+              мастеров.
+            </li>
+            <li class="marketing__item">
+              <b>Регулярно участвуем в телевизионных и радиошоу,</b> а также в
+              других интересных проектах.
+            </li>
+            <li class="marketing__item">
+              <b>Каждый квартал проводим крупные мероприятия,</b> например,
+              мастер-классы с известными специалистами, а также отмечаем
+              праздники.
+            </li>
+            <li class="marketing__item">
+              <b>Будете регулярно получать макеты</b> на фирменную одежду,
+              шоперы, браслеты, чехлы для телефонов и попсокеты для резидентов и
+              их клиентов.
+            </li>
+            <li class="marketing__item">
+              <b>Продвижение в социальных сетях.</b> Будем вести ваши страницы в
+              «Инстаграме», «Тик-Токе» и во «ВКонтакте», привлекать мастеров и
+              укреплять их лояльность.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="clients">
+        <div class="container">
+          <div class="clients__content">
+            <div class="clients__text-box">
+              <p class="clients__title">
+                Мастера и клиенты рекомендуют нас коллегам и знакомым,
+              </p>
+              <p class="clients__text">
+                их тёплые отзывы становятся дополнительным бесплатным источником
+                трафика.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback-bottom">
+        <div class="container">
+          <form class="line-form">
+            <h3 class="line-form__title">
+              Оставьте заявку и получите презентацию франшизы
+            </h3>
+            <div class="line-form__input-list">
+              <div class="line-form__input-box">
+                <p class="line-form__input-label">Введите ваше имя</p>
+                <input
+                  type="text"
+                  name="name"
+                  data-type="name"
+                  class="line-form__input"
+                />
+              </div>
+              <div class="line-form__input-box">
+                <p class="line-form__input-label">Введите ваш телефон</p>
+                <input
+                  type="text"
+                  placeholder="+7 (    ) ___ __ __"
+                  name="phone"
+                  data-type="phone"
+                  class="line-form__input"
+                />
+              </div>
+              <div class="line-form__input-box">
+                <p class="line-form__input-label">Введите ваш e-mail</p>
+                <input
+                  type="email"
+                  placeholder="example@mail.ru"
+                  name="email"
+                  data-type="email"
+                  class="line-form__input"
+                />
+              </div>
+              <button class="button button_line-form">Оставить заявку</button>
+            </div>
+            <p class="line-form__policy">
+              Нажимая на кнопку «Оcтавить заявку», я даю согласие на обработку
+              персональных данных и соглашаюсь с
+              <button class="js-policy">политикой конфиденциальности</button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="owner">
+        <div class="container">
+          <h2 class="owner__title">
+            Перенимайте опыт и мотивацию практика
+            <span>с 15-летним стажем</span> в профессии и бизнесе
+          </h2>
+          <div class="owner__content">
+            <div class="owner__text-box">
+              <p class="owner__note">
+                Меня зовут <b>Ксения Есенина</b> — я основатель и вдохновитель
+                сети ARTCRAFT!
+              </p>
+              <p class="owner__text">
+                Развиваюсь в бьюти-сфере уже 11 лет — успела поработать и как
+                наёмный сотрудник, и как самостоятельный мастер, — поэтому
+                отлично знаю нюансы всех форм работы.
+              </p>
+              <p class="owner__text">
+                Практика показала, что городу нужен новый формат бьюти-услуг,
+                более выгодный специалистам и их клиентам. Так в 2019 году
+                появился первый бьюти-коворкинг — уютное место сбора талантливых
+                мастеров.
+              </p>
+              <p class="owner__text">
+                Сформулировала амбициозную миссию — создать единое пространство,
+                где каждый бьюти-мастер реализует себя и будет участвовать в
+                насыщенной жизни комьюнити.
+              </p>
+              <p class="owner__text">
+                Интерес к коворкингу был таким высоким, что бизнес начал быстро
+                расти, несмотря на кризис и пандемию.
+              </p>
+              <p class="owner__note">
+                Лично участвую в делах каждого коворкинга и 
+                <b> помогу вам построить свою историю успеха. </b>
+              </p>
+            </div>
+            <img
+              src="./img/owner.png"
+              alt="Фото основателя"
+              class="owner__photo"
+            />
           </div>
         </div>
       </section>

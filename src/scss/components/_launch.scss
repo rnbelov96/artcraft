@@ -1,11 +1,20 @@
 .launch {
   padding-top: 62px;
   padding-bottom: 64px;
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .launch__title {
   @include title;
   margin-bottom: 76px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 40px;
+  }
 
   span {
     @include highlight;
@@ -17,12 +26,17 @@
   display: flex;
   justify-content: space-between;
   @include max-width(632px);
+  margin-bottom: 96px;
+  transition: transform 0.5s;
+
+  @media (max-width: 575px) {
+    margin-bottom: 60px;
+  }
 }
 
 .launch__item {
-  width: 98%;
-  margin-left: 1%;
-  margin-right: 1%;
+  width: 95%;
+  margin-right: 5%;
   min-height: 320px;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -31,4 +45,134 @@
   padding-top: 73px;
   padding-bottom: 30px;
   flex-shrink: 0;
+
+  @media (max-width: 575px) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) .launch__item-title::before {
+      content: '0#{$i}';
+    }
+  }
+}
+
+.launch__item-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  padding-left: 53px;
+  text-transform: uppercase;
+  color: #4e4d4d;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    font-size: 27px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 19px;
+  }
+
+  &::before {
+    z-index: -1;
+    font-family: 'Playfair Display';
+    font-size: 96px;
+    line-height: 0.77;
+    text-transform: uppercase;
+    color: #eeeeed;
+    position: absolute;
+    left: 0px;
+    top: -56px;
+  }
+}
+
+.launch__item-text {
+  @include main;
+  margin-bottom: 0;
+  color: #4e4d4d;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.launch__nav-box {
+  display: flex;
+  align-items: center;
+  @include max-width(688px);
+  margin-bottom: 40px;
+}
+
+.launch__nav {
+  width: calc(100% / 5);
+  height: 4px;
+  background: #e5e5e5;
+
+  &_active {
+    background: #0a0a0a;
+    height: 10px;
+  }
+}
+
+.launch__last-box {
+  display: flex;
+  gap: 75px;
+  align-items: flex-end;
+
+  @media (max-width: 575px) {
+    gap: 50px;
+  }
+}
+
+.launch__number-box {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.launch__current-number {
+  font-size: 72px;
+  line-height: 0.83;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.launch__total-number {
+  color: #e5e5e5;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.launch__btn-box {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  @media (max-width: 575px) {
+    gap: 25px;
+  }
+}
+
+.launch__prev-btn,
+.launch__next-btn {
+  &:disabled {
+    path {
+      stroke: #e5e5e5;
+    }
+  }
+  @include reset-btn;
+  width: 40px;
+  height: 27px;
+
+  path {
+    stroke: $black;
+  }
 }

@@ -1,0 +1,71 @@
+.master {
+  padding-top: 64px;
+  padding-bottom: 171px;
+
+  @media (max-width: 1200px) {
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+}
+
+.master__title {
+  @include title;
+  margin-bottom: 23px;
+
+  span {
+    @include highlight;
+  }
+}
+
+.master__text {
+  @include subtitle;
+  margin-bottom: 32px;
+  @include max-width(1080px);
+
+  &_bottom {
+    @include max-width(800px);
+    margin-bottom: 0;
+  }
+}
+
+.master__list {
+  @include reset-list;
+  @include max-width(570px);
+  margin-bottom: 32px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/master-phone.png');
+    z-index: -1;
+    right: -1110px;
+    top: -324px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.master__item {
+  padding-left: 61px;
+  position: relative;
+  font-size: 22px;
+  line-height: 1.45;
+  margin-bottom: 25px;
+
+  @media (max-width: 575px) {
+    font-size: 19px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    content: url('/src/img/icons/offer-list.png');
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

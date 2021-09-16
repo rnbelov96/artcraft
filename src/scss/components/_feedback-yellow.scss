@@ -1,3 +1,11 @@
+.feedback-yellow {
+  &_bottom {
+    position: relative;
+    top: -105px;
+    margin-bottom: -105px;
+  }
+}
+
 .feedback-yellow__bg {
   position: absolute;
   content: '';
