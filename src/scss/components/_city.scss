@@ -1,0 +1,81 @@
+.city {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  min-height: 814px;
+  @include bg;
+  background-image: url('/src/img/bgs/city-bg.jpg');
+
+  @media (max-width: 1200px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.city__content {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.city__text-box {
+  @include max-width(808px);
+
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
+}
+
+.city__title {
+  @include title;
+  color: white;
+  margin-bottom: 32px;
+
+  span {
+    color: $yellow;
+  }
+}
+
+.city__text {
+  @include subtitle;
+  margin-bottom: 32px;
+  color: white;
+}
+
+.city__note {
+  @include subtitle-bold;
+  color: white;
+  position: relative;
+  @include max-width(742px);
+
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -190px;
+    right: -60px;
+    content: url('/src/img/city-arrow.png');
+
+    @media (max-width: 1450px) {
+      right: 0px;
+    }
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+  
+  span {
+    color: $yellow;
+  }
+}

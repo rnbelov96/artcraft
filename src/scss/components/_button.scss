@@ -23,6 +23,28 @@
     font-weight: normal;
   }
 
+  &_footer {
+    @include max-width(208px);
+    background: linear-gradient(180deg, #FADE40 0%, #FFC700 100%);
+    color: black;
+    margin-bottom: 16px;
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    min-height: 48px;
+  }
+
+  &_present {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    @media (max-width: 575px) {
+      display: block;
+    }
+  }
+
   &:hover {
     background: #FADE40;
   }

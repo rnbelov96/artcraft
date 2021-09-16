@@ -32,7 +32,7 @@ const modalElList = document.querySelectorAll('.modal');
 const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
 
 const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
-const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
+const formBtnElList = formModalEl.querySelectorAll('.js-modal-form-btn');
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
@@ -73,7 +73,9 @@ callbackBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[0].title;
-    formBtnEl.textContent = modalFormInfoList[0].button;
+    formBtnElList.forEach(el => {
+      el.textContent = modalFormInfoList[0].button;
+    });
     openModal(formModalEl as HTMLDivElement);
   });
 });
@@ -83,7 +85,9 @@ presentBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[1].title;
-    formBtnEl.textContent = modalFormInfoList[1].button;
+    formBtnElList.forEach(el => {
+      el.textContent = modalFormInfoList[1].button;
+    });
     openModal(formModalEl as HTMLDivElement);
   });
 });

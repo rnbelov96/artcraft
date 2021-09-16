@@ -13,6 +13,10 @@
 
   &_gains {
     margin-bottom: 100px;
+
+    @media (max-width: 575px) {
+      display: none;
+    }
   }
 
   &_feedback-yellow {

@@ -5,6 +5,9 @@
 @import './base/global.scss';
 @import './components/modal.scss';
 @import './components/priv-policy.scss';
+@import './components/header.scss';
+@import './components/button.scss';
+@import './components/footer.scss';
 
 .thanks,
 .error {
@@ -13,7 +16,9 @@
   flex-direction: column;
 
   &__body {
-    background-color: black;
+    @include bg;
+    background-image: url('/src/img/bgs/desc-bg.jpg');
+    background-attachment: fixed;
   }
 
   &__body,
@@ -24,7 +29,6 @@
   &__header {
     overflow: hidden;
     flex: 0 0 auto;
-    padding-top: 20px;
     padding-bottom: 30px;
   }
 

@@ -20,6 +20,10 @@
   text-align: center;
   line-height: 1.17;
   margin-bottom: 16px;
+
+  @media (max-width: 575px) {
+    font-size: 36px;
+  }
 }
 
 .feedback-black__text {

@@ -1,0 +1,128 @@
+.footer {
+  min-height: 224px;
+  background: black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__content {
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 24px;
+
+  @media (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer__company-name {
+  color: #f0eae5;
+  font-size: 22px;
+  line-height: 1.45;
+  margin-bottom: 8px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.footer__company-data {
+  color: #f0eae5;
+  font-size: 18px;
+  line-height: 1.78;
+  margin-bottom: 0;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.footer__links-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__policy {
+  @include reset-btn;
+  font-size: 14px;
+  line-height: 2.29;
+  text-align: center;
+  text-decoration: underline;
+  color: #f0eae5;
+  margin-bottom: 8px;
+}
+
+.footer__franch5 {
+  font-size: 14px;
+  line-height: 2.29;
+  text-align: center;
+  text-decoration: underline;
+  color: #f0eae5;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #f0eae5;
+  }
+}
+
+.footer__contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (max-width: 767px) {
+    align-items: center;
+  }
+}
+
+.footer__phone {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.91;
+  margin-bottom: 0;
+  color: white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  gap: 45px;
+  justify-content: flex-end;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.footer__social {
+  width: 32px;
+  height: 32px;
+
+  &:first-child {
+    background-image: url('/src/img/icons/insta.svg');
+  }
+
+  &:last-child {
+    background-image: url('/src/img/icons/vk.svg');
+  }
+}

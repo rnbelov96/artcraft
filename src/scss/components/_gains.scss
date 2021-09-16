@@ -9,6 +9,12 @@
     margin-bottom: -30px;
     padding-bottom: 30px;
   }
+
+  @media (max-width: 575px) {
+    top: 0px;
+    margin-bottom: 0px;
+    padding-top: 40px;
+  }
 }
 
 .gains__list {
