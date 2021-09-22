@@ -34,6 +34,14 @@
     min-height: 48px;
   }
 
+  &_thanks{
+    background: linear-gradient(180deg, #FADE40 0%, #FFC700 100%);
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &_present {
     display: none;
     margin-left: auto;

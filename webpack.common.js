@@ -37,6 +37,12 @@ module.exports = {
         test: /\.html$/,
         use: ['html-loader'],
       },
+      {
+        test: /\.(webm)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
 

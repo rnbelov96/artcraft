@@ -9,90 +9,96 @@
 @import './components/button.scss';
 @import './components/footer.scss';
 
-.thanks,
-.error {
+.thanks {
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
-  height: 100%;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
-  &__body {
-    @include bg;
-    background-image: url('/src/img/bgs/desc-bg.jpg');
-    background-attachment: fixed;
+.thanks__video-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.thanks__dark-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  overflow: hidden;
+  z-index: -1;
+  background-color: rgba($black, 0.5);
+}
+
+.thanks__video-bg {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.thanks__title {
+  @include max-width(928px);
+  margin-left: auto;
+  margin-right: auto;
+  @include title-main;
+  text-align: center;
+  color: white;
+  margin-bottom: 32px;
+
+  span {
+    color: $yellow;
   }
 
-  &__body,
-  &__html {
-    height: 100%;
+  @media (max-width: 767px) {
+    font-size: 42px;
   }
 
-  &__header {
-    overflow: hidden;
-    flex: 0 0 auto;
-    padding-bottom: 30px;
-  }
-
-  .container {
-    max-width: 1140px;
-  }
-
-  footer {
-    flex: 0 0 auto;
-  }
-
-  &__content {
-    flex: 1 0 auto;
-    padding: 40px 0;
-
-    .container {
-      height: 100%;
-    }
-  }
-
-  &__content-wrapper {
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
-
-  &__content-box {
-    width: 100%;
-  }
-
-  &__title {
-    color: white;
-    font-size: 30px;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  &__user-name {
-    text-transform: uppercase;
-  }
-
-  &__subtitle {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-  }
-
-  &__link {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-
-  &__btn-box {
-    display: flex;
-    justify-content: center;
+  @media (max-width: 575px) {
+    font-size: 24px;
   }
 }
 
-.error {
-  &__btn-box {
-    margin-top: 20px;
+.thanks__text {
+  @include subtitle-bold;
+  margin-bottom: 48px;
+  text-align: center;
+  color: white;
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.thanks__link {
+  &:focus,
+  &:active,
+  &:hover {
+    text-decoration: none;
   }
 }
