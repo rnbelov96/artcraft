@@ -3,6 +3,7 @@ import './ts/modals';
 import './ts/slider';
 import './ts/calc';
 import './ts/launch-slider';
+import './ts/scroll';
 import './ts/setup-forms';
 import './ts/f5leads-init';
 import './ts/f5leads';
