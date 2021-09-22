@@ -55,11 +55,11 @@
   &::after {
     content: url('/src/img/owner.png');
     position: absolute;
-    right: -715px;
-    top: -99px;
+    right: -813px;
+    top: -154px;
 
     @media (max-width: 1450px) {
-      right: -615px;
+      right: -710px;
     }
 
     @media (max-width: 1270px) {
@@ -79,10 +79,6 @@
 
   &:last-child {
     margin-bottom: 0;
-
-    @media (max-width: 1270px) {
-      margin-bottom: 24px;
-    }
   }
 }
 
