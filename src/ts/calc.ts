@@ -10,7 +10,9 @@ const rentRange = document.querySelector('.js-rent-range') as HTMLInputElement;
 const trainingRange = document.querySelector(
   '.js-training-range',
 ) as HTMLInputElement;
-const roomRange = document.querySelector('.js-room-range') as HTMLInputElement;
+const clientsRange = document.querySelector(
+  '.js-clients-range',
+) as HTMLInputElement;
 
 const resultLabelEl = document.querySelector(
   '.js-calc-result',
@@ -18,13 +20,15 @@ const resultLabelEl = document.querySelector(
 
 let result: number;
 
-let personCurrentStep = 2;
-let adultsCurrentStep = 2;
-let kidsCurrentStep = 2;
+let rentCurrentStep = 2;
+let trainingCurrentStep = 2;
+let clientsCurrentStep = 2;
 
 const calcResult = () => {
-  result = (Number(rentRange.value) * 4500 + Number(trainingRange.value) * 10500)
-    * Number(roomRange.value);
+  result = (Number(rentRange.value) * 3000
+      + Number(trainingRange.value) * 34000
+      + Number(clientsRange.value) * 1500)
+    * 0.25;
   resultLabelEl.textContent = result.toLocaleString();
   return result;
 };
@@ -50,12 +54,12 @@ rentRange.addEventListener('input', e => {
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  personCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  rentCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (rentCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (rentCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
@@ -66,28 +70,28 @@ trainingRange.addEventListener('input', e => {
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  adultsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  trainingCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (trainingCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (trainingCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-roomRange.addEventListener('input', e => {
+clientsRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  kidsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  clientsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (clientsCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (clientsCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
