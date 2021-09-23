@@ -106,11 +106,18 @@
 }
 
 .modal__video {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
+  @media (max-width: 1530px) {
+    width: 90%;
+    height: 50vw;
+  }
 
-  @media (max-width: 575px) {
+  @media (max-width: 767px) {
+    width: 75%;
+    height: 42vw;
+  }
+
+  @media (max-width: 767px) {
     width: 98%;
+    height: 55vw;
   }
 }
