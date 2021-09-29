@@ -29,7 +29,7 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
+const [formModalEl, policyModalEl, youtubeAdvModalEl, youtubeReviewModalEl] = modalElList;
 
 const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
 const formBtnElList = formModalEl.querySelectorAll('.js-modal-form-btn');
@@ -96,4 +96,10 @@ const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
 youtubeAdvBtnCallEl?.addEventListener('click', () => {
   openedModalList.unshift(youtubeAdvModalEl);
   openModal(youtubeAdvModalEl as HTMLDivElement);
+});
+
+const youtubeReviewBtnCallEl = document.querySelector('.js-youtube-review');
+youtubeReviewBtnCallEl?.addEventListener('click', () => {
+  openedModalList.unshift(youtubeReviewModalEl);
+  openModal(youtubeReviewModalEl as HTMLDivElement);
 });

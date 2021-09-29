@@ -105,7 +105,7 @@ const initSlider = (options: {
       pos: -200,
       width: 49,
       margin: '0% calc(2% / 4)',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
     },
     {
       mode: 1,
@@ -406,7 +406,7 @@ const initSlider = (options: {
 };
 
 initSlider({
-  imagesLength: 2,
+  imagesLength: 13,
   isFlexible: true,
   maxMode: 2,
   withButtons: true,
