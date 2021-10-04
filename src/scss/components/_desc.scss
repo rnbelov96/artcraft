@@ -6,6 +6,11 @@
 
   @media (max-width: 991px) {
     min-height: auto;
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
   }
 }
 
@@ -15,7 +20,8 @@
   line-height: 1.23;
   margin-top: 145px;
   color: white;
-  margin-bottom: 12px;position: relative;
+  margin-bottom: 12px;
+  position: relative;
 
   @media (max-width: 991px) {
     margin-top: 40px;
@@ -41,7 +47,7 @@
     }
 
     @media (max-width: 991px) {
-      content: none;
+      content: none !important;
     }
   }
 
