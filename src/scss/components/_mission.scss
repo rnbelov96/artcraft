@@ -10,7 +10,6 @@
 
 .mission__title {
   @include title;
-  @include max-width(1096px);
   margin-bottom: 32px;
 
   @media (max-width: 991px) {
