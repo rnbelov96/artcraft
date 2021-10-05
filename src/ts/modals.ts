@@ -31,13 +31,27 @@ const openModal = (modalEl: HTMLDivElement) => {
 const modalElList = document.querySelectorAll('.modal');
 const [formModalEl, policyModalEl, youtubeAdvModalEl, youtubeReviewModalEl] = modalElList;
 
-const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
+const youtubeAdvModalWrapperEl = youtubeAdvModalEl.querySelector(
+  '.modal__center-wrapper',
+) as HTMLDivElement;
+let isYoutubeAdvModalOpened = false;
+const youtubeReviewModalWrapperEl = youtubeReviewModalEl.querySelector(
+  '.modal__center-wrapper',
+) as HTMLDivElement;
+let isYoutubeReviewModalOpened = false;
+
+const formTitleEl = formModalEl.querySelector(
+  '.js-modal-form-title',
+) as HTMLSpanElement;
 const formBtnElList = formModalEl.querySelectorAll('.js-modal-form-btn');
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
-    if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
+    if (
+      e.target === e.currentTarget
+      || [...modalWrapperElList].includes(e.target as Element)
+    ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
       if (clickedModal === youtubeAdvModalEl) {
         const iframe = clickedModal.querySelector('iframe');
@@ -94,12 +108,42 @@ presentBtnElList.forEach(btn => {
 
 const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
 youtubeAdvBtnCallEl?.addEventListener('click', () => {
+  if (!isYoutubeAdvModalOpened) {
+    isYoutubeAdvModalOpened = true;
+    youtubeAdvModalWrapperEl.innerHTML = `
+      <iframe
+        class="modal__video"
+        width="1520"
+        height="855"
+        src="https://www.youtube.com/embed/1YKphEfneuk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
   openedModalList.unshift(youtubeAdvModalEl);
   openModal(youtubeAdvModalEl as HTMLDivElement);
 });
 
 const youtubeReviewBtnCallEl = document.querySelector('.js-youtube-review');
 youtubeReviewBtnCallEl?.addEventListener('click', () => {
+  if (!isYoutubeReviewModalOpened) {
+    isYoutubeReviewModalOpened = true;
+    youtubeReviewModalWrapperEl.innerHTML = `
+      <iframe
+        class="modal__video"
+        width="1520"
+        height="855"
+        src="https://www.youtube.com/embed/VxJ6-l-aoTE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
   openedModalList.unshift(youtubeReviewModalEl);
   openModal(youtubeReviewModalEl as HTMLDivElement);
 });
