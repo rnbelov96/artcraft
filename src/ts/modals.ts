@@ -19,9 +19,13 @@ const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.overflowY = 'inherit';
   modalEl.style.pointerEvents = 'none';
   document.body.style.overflowY = 'auto';
+  document.body.style.paddingRight = '0px';
 };
 
 const openModal = (modalEl: HTMLDivElement) => {
+  if (window.innerWidth > document.body.clientWidth) {
+    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
+  }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
   modalEl.style.pointerEvents = 'auto';
