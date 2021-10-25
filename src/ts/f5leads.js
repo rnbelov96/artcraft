@@ -16,7 +16,7 @@ const validateForm = form => {
     phoneInputEl.classList.add('input-error');
     isOk = false;
   }
-  if (emailInputEl.value === '') {
+  if (emailInputEl && emailInputEl.value === '') {
     emailInputEl.classList.add('input-error');
     isOk = false;
   }
@@ -27,13 +27,20 @@ const validateForm = form => {
 
   if (
     phoneInputEl.value !== ''
-    && !validator.isMobilePhone(`${phoneInputEl.value.replace(/\(|\)|-|_|\s/g, '')}`, 'ru-RU')
+    && !validator.isMobilePhone(
+      `${phoneInputEl.value.replace(/\(|\)|-|_|\s/g, '')}`,
+      'ru-RU',
+    )
   ) {
     phoneInputEl.classList.add('input-error');
     isOk = false;
   }
 
-  if (emailInputEl.value !== '' && !validator.isEmail(emailInputEl.value)) {
+  if (
+    emailInputEl
+    && emailInputEl.value !== ''
+    && !validator.isEmail(emailInputEl.value)
+  ) {
     emailInputEl.classList.add('input-error');
     isOk = false;
   }
@@ -147,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ...objectifyForm([...new FormData(form).entries()]),
       };
 
-      if (document.formData.name === undefined) document.formData.name = window.location.hostname;
+      if (document.formData.name === undefined) { document.formData.name = window.location.hostname; }
 
       // fetch(
       //   `welcomemail.php?name=${document.formData.name}&email=${document.formData.email}`,
@@ -179,17 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = JSON.stringify(document.formData);
 
-      const response = await fetch(
-        'https://f5leads.franch5.ru/add_lead',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache',
-          },
-          body: data,
+      const response = await fetch('https://f5leads.franch5.ru/add_lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache',
         },
-      );
+        body: data,
+      });
 
       if (!response.ok) {
         window.location = 'error.html';
@@ -200,10 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.f5leads.expect_second_form === '1'
         && form.classList.contains('secondform')
       ) {
-        if (document.f5leads.onSubmitSecondForm !== undefined) document.f5leads.onSubmitSecondForm(form);
+        if (document.f5leads.onSubmitSecondForm !== undefined) { document.f5leads.onSubmitSecondForm(form); }
       } else {
         localStorage.lastFirstFormData = JSON.stringify(document.formData);
-        if (document.f5leads.onSubmitFirstForm !== undefined) document.f5leads.onSubmitFirstForm(form);
+        if (document.f5leads.onSubmitFirstForm !== undefined) { document.f5leads.onSubmitFirstForm(form); }
       }
     });
   });
