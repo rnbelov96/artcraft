@@ -1,6 +1,5 @@
 document.f5leads = {};
-// document.f5leads.emails = 'artcraft_coworking@mail.ru'; // comma separated
-document.f5leads.emails = 'belov.roh777@yandex.ru';
+document.f5leads.emails = 'artcraft_coworking@mail.ru, leads@conversionpro.agency'; // comma separated
 document.f5leads.send_to_bitrix = 'false';
 document.f5leads.expect_second_form = '0';
 document.f5leads.counterId = '';
