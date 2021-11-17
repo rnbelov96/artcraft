@@ -131,6 +131,27 @@ youtubeAdvBtnCallEl?.addEventListener('click', () => {
   openModal(youtubeAdvModalEl as HTMLDivElement);
 });
 
+const youtubeAdv2BtnCallEl = document.querySelector('.js-youtube-adv-2');
+youtubeAdv2BtnCallEl?.addEventListener('click', () => {
+  if (!isYoutubeAdvModalOpened) {
+    isYoutubeAdvModalOpened = true;
+    youtubeAdvModalWrapperEl.innerHTML = `
+      <iframe
+        class="modal__video"
+        width="1520"
+        height="855"
+        src="https://www.youtube.com/embed/1YKphEfneuk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
+  openedModalList.unshift(youtubeAdvModalEl);
+  openModal(youtubeAdvModalEl as HTMLDivElement);
+});
+
 const youtubeReviewBtnCallEl = document.querySelector('.js-youtube-review');
 youtubeReviewBtnCallEl?.addEventListener('click', () => {
   if (!isYoutubeReviewModalOpened) {
