@@ -10,9 +10,11 @@
   padding-left: 7px;
   padding-right: 7px;
   text-transform: uppercase;
-  color: white;
+  // color: white;
+  color: black;
   font-weight: 900;
-  background: linear-gradient(180deg, #494949 0%, #0A0A0A 100%);
+  // background: linear-gradient(180deg, #494949 0%, #0A0A0A 100%);
+  background: #fade40;
   border-radius: 8px;
   @include max-width(328px);
   min-height: 80px;
@@ -25,7 +27,7 @@
 
   &_footer {
     @include max-width(208px);
-    background: linear-gradient(180deg, #FADE40 0%, #FFC700 100%);
+    background: linear-gradient(180deg, #fade40 0%, #ffc700 100%);
     color: black;
     margin-bottom: 16px;
     display: block;
@@ -34,8 +36,8 @@
     min-height: 48px;
   }
 
-  &_thanks{
-    background: linear-gradient(180deg, #FADE40 0%, #FFC700 100%);
+  &_thanks {
+    background: linear-gradient(180deg, #fade40 0%, #ffc700 100%);
     color: black;
     display: block;
     margin-left: auto;
@@ -54,11 +56,11 @@
   }
 
   &:hover {
-    background: #FADE40;
+    background: linear-gradient(180deg, #494949 0%, #0A0A0A 100%);
+    color: white;
   }
 
   &:active {
-
     top: 6px;
   }
 
