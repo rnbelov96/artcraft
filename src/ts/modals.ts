@@ -24,7 +24,9 @@ const closeModal = (modalEl: HTMLDivElement) => {
 
 const openModal = (modalEl: HTMLDivElement) => {
   if (window.innerWidth > document.body.clientWidth) {
-    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
+    document.body.style.paddingRight = `${
+      window.innerWidth - document.body.clientWidth
+    }px`;
   }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
@@ -33,12 +35,16 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [formModalEl, policyModalEl, youtubeAdvModalEl, youtubeReviewModalEl] = modalElList;
+const [formModalEl, policyModalEl, youtubeAdvModalEl, youtubeAdv2ModalEl, youtubeReviewModalEl] = modalElList;
 
 const youtubeAdvModalWrapperEl = youtubeAdvModalEl.querySelector(
   '.modal__center-wrapper',
 ) as HTMLDivElement;
 let isYoutubeAdvModalOpened = false;
+const youtubeAdv2ModalWrapperEl = youtubeAdv2ModalEl.querySelector(
+  '.modal__center-wrapper',
+) as HTMLDivElement;
+let isYoutubeAdv2ModalOpened = false;
 const youtubeReviewModalWrapperEl = youtubeReviewModalEl.querySelector(
   '.modal__center-wrapper',
 ) as HTMLDivElement;
@@ -133,14 +139,14 @@ youtubeAdvBtnCallEl?.addEventListener('click', () => {
 
 const youtubeAdv2BtnCallEl = document.querySelector('.js-youtube-adv-2');
 youtubeAdv2BtnCallEl?.addEventListener('click', () => {
-  if (!isYoutubeAdvModalOpened) {
-    isYoutubeAdvModalOpened = true;
-    youtubeAdvModalWrapperEl.innerHTML = `
+  if (!isYoutubeAdv2ModalOpened) {
+    isYoutubeAdv2ModalOpened = true;
+    youtubeAdv2ModalWrapperEl.innerHTML = `
       <iframe
         class="modal__video"
         width="1520"
         height="855"
-        src="https://www.youtube.com/embed/1YKphEfneuk"
+        src="https://www.youtube.com/embed/L4MkmWSOlxQ"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -148,8 +154,8 @@ youtubeAdv2BtnCallEl?.addEventListener('click', () => {
       ></iframe>
     `;
   }
-  openedModalList.unshift(youtubeAdvModalEl);
-  openModal(youtubeAdvModalEl as HTMLDivElement);
+  openedModalList.unshift(youtubeAdv2ModalEl);
+  openModal(youtubeAdv2ModalEl as HTMLDivElement);
 });
 
 const youtubeReviewBtnCallEl = document.querySelector('.js-youtube-review');
