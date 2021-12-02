@@ -65,11 +65,7 @@
   line-height: 1.42;
   margin-bottom: 0;
   text-align: center;
-  @include max-width(292px);
-
-  &_small {
-    @include max-width(192px);
-  }
+  @include max-width(293px);
 }
 
 .income__graph-label {
